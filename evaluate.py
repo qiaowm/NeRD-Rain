@@ -51,8 +51,8 @@ def rgb_to_ycbcr(img):
     return ycbcr
 
 if __name__ == "__main__":
-    folder1 = '/home/featurize/data/LHP-Rain-RGB/test/target_downsample'
-    folder2 = '/home/featurize/data/LHP-Rain-RGB/test/result_downsample_ft/'
+    folder1 = './Datasets/LHP-Rain-RGB-ds/result/result_ft'
+    folder2 = './Datasets/LHP-Rain-RGB-ds/test/input'
 
     try:
         avg_psnr, avg_ssim = calculate_metrics(folder1, folder2)

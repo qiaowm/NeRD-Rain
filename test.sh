@@ -1,4 +1,4 @@
 python test.py\
-    --input_dir '/home/featurize/data/LHP-Rain-RGB/test/input/' \
-    --output_dir '/home/featurize/data/LHP-Rain-RGB/test/result_ft/' \
-    --weights '/home/featurize/work/NeRD-Rain/checkpoints/LHP-Rain/Deraininig/models/Multiscale/model_best.pth'
+    --input_dir './Datasets/real-ds' \
+    --output_dir './Datasets/real-ds/result_pretrain' \
+    --weights './checkpoints/model_large_SPA.pth'

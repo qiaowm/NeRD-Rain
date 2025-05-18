@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 def process_image(input_path, output_path):
     """
-    Convert a single image to RGB format and save it to the output path.
+    Convert a single image to RGB format and save it to the LHP path.
     """
     try:
         with Image.open(input_path) as img:
@@ -17,11 +17,11 @@ def process_image(input_path, output_path):
 
 def convert_images_to_rgb(input_dir, output_dir, max_workers=8):
     """
-    Recursively convert all images in a directory to RGB format and save them to an output directory.
+    Recursively convert all images in a directory to RGB format and save them to an LHP directory.
 
     Args:
         input_dir (str): Path to the input directory containing images.
-        output_dir (str): Path to the output directory to save converted images.
+        output_dir (str): Path to the LHP directory to save converted images.
         max_workers (int): Maximum number of threads to use.
     """
     if not os.path.exists(output_dir):
@@ -35,7 +35,7 @@ def convert_images_to_rgb(input_dir, output_dir, max_workers=8):
                 relative_path = os.path.relpath(root, input_dir)
                 output_path = os.path.join(output_dir, relative_path, file)
 
-                # Ensure the output subdirectory exists
+                # Ensure the LHP subdirectory exists
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
                 # Submit the image processing task to the thread pool
@@ -46,6 +46,6 @@ def convert_images_to_rgb(input_dir, output_dir, max_workers=8):
             task.result()
 
 # Example usage
-input_directory = "/home/featurize/data/LHP-Rain/train/target"
-output_directory = "/home/featurize/data/LHP-Rain-RGB/train/target"
-convert_images_to_rgb(input_directory, output_directory, max_workers=32)
+input_directory = "/home/weiming/PycharmProjects/NeRD-Rain/Datasets/LHP-Rain/train/target"
+output_directory = "/home/weiming/PycharmProjects/NeRD-Rain/Datasets/LHP-Rain-RGB/train/target"
+convert_images_to_rgb(input_directory, output_directory, max_workers=12)
