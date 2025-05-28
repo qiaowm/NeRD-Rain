@@ -46,6 +46,6 @@ def convert_images_to_rgb(input_dir, output_dir, max_workers=8):
             task.result()
 
 # Example usage
-input_directory = "/home/weiming/PycharmProjects/NeRD-Rain/Datasets/LHP-Rain/train/target"
-output_directory = "/home/weiming/PycharmProjects/NeRD-Rain/Datasets/LHP-Rain-RGB/train/target"
+input_directory = "/home/weiming/PycharmProjects/NeRD-Rain/Datasets/real-ds/input"
+output_directory = "/home/weiming/PycharmProjects/NeRD-Rain/Datasets/real-ds/input"
 convert_images_to_rgb(input_directory, output_directory, max_workers=12)

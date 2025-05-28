@@ -35,5 +35,5 @@ def downsample_images(input_dir, output_dir):
 
 # 示例用法
 input_folder = './Datasets/real'  # 输入文件夹路径
-output_folder = './Datasets/real-ds'  # 输出文件夹路径
+output_folder = './Datasets/real-ds/input'  # 输出文件夹路径
 downsample_images(input_folder, output_folder)

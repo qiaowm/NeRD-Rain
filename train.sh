@@ -1,7 +1,7 @@
 #!/bin/bash
 python train.py \
-    --train_dir '/home/featurize/data/LHP-Rain-RGB-ds/train/' \
-    --val_dir '/home/featurize/data/LHP-Rain-RGB-ds/val/' \
+    --train_dir './Datasets/LHP-Rain-RGB-ds/train/' \
+    --val_dir './Datasets/LHP-Rain-RGB-ds/val/' \
     --model_save_dir './checkpoints/LHP-Rain-ds/' \
     --pretrain_weights './checkpoints/model_large_SPA.pth' \
     --num_epochs 50 \
