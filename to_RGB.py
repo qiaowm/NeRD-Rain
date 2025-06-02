@@ -9,7 +9,7 @@ def process_image(input_path, output_path):
     try:
         with Image.open(input_path) as img:
             # Convert to RGB if not already in RGB mode
-            rgb_img = img.convert("RGB")
+            rgb_img = img.convrt("RGB")
             rgb_img.save(output_path)
             print(f"Converted: {input_path} -> {output_path}")
     except Exception as e:
