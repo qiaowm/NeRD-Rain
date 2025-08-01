@@ -1,13 +1,4 @@
+### 基于NeRD-Rain的一个图片去雨项目，用于复旦大学数字图像处理课程作业
 
-## 1
-首先尝试根据LHP-Rain数据集提供的代码训练SCD-Former，但并未提供预训练权重，重新训练算力不足。
-## 2
-随后使用在其他数据集如Rain200L等预训练的模型，发现去雨效果并不理想。
-
-## 3
-使用传统方法。
-但最终结果仍不理想。结合传统方法和预训练模型也无法达到预期效果。
-
-## 4
-最终决定使用sota模型NeRD-Rain在SPA数据集上预训练的版本，使用LHP-Rain数据集较小的版本（仅包含3000对图片）进行微调，成功取得了较好的效果。
-
+Bidirectional Multi-Scale Implicit Neural Representations for Image Deraining (CVPR 2024)
+原项目地址：https://github.com/cschenxiang/NeRD-Rain
